@@ -1,0 +1,31 @@
+<?xml version="1.1.0" encoding="utf-8" ?>
+<widget id="DynamicBrowserTitle.widget.DynamicBrowserTitle" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>DynamicBrowserTitle</name>
+    <description>Change the browser title based on a mendix attribute</description>
+
+    <icon />
+    <properties>
+        <property key="title" type="attribute">
+            <caption>Title attribute</caption>
+            <category>Data source</category>
+            <description>The value to replace the title with</description>
+            <attributeTypes>
+                <attributeType name="String" />
+            </attributeTypes>
+        </property>
+        <property key="delay" type="integer" defaultValue="100">
+            <caption>Delay (in ms)</caption>
+            <category>Data source</category>
+            <description>Optional delay to execute javascript. 0ms delay may result in the title being replaced before mxui is fully loaded. If this occurs than the default page title will overwrite the change.</description>
+        </property>
+        <property key="emptyReplacement" type="translatableString" required="false">
+                    <caption>Empty value replacement</caption>
+                    <category>Data source</category>
+                    <description>This string will be used when an attribute returns empty.</description>
+                </property>
+    </properties>
+
+
+    
+</widget>
+
