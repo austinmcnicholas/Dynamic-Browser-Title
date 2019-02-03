@@ -21,7 +21,7 @@
         <property key="emptyReplacement" type="translatableString" required="false">
                     <caption>Empty value replacement</caption>
                     <category>Data source</category>
-                    <description>This string will be used when an attribute returns empty.</description>
+                    <description>This string will be used when an attribute returns empty. If left blank then nothing will be replaced in the title</description>
                 </property>
     </properties>
 

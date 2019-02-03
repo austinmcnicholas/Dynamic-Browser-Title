@@ -54,13 +54,24 @@ define([
         _setTitle : function(title) {
            logger.debug(this.id + "._setTitle");
             
-           var backupString = this.emptyReplacement;
 
-           if (title){
-            setTimeout(function(){ document.title = title }, this.delay);
-           } else {
-            setTimeout(function(){ document.title = backupString }, this.delay);  
-           }
+           
+
+
+            
+                if (title){
+                    setTimeout(function(){ document.title = title }, this.delay);
+                } else {
+
+                    if (this.emptyReplacement){
+                        var backupString = this.emptyReplacement;    
+                        setTimeout(function(){ document.title = backupString }, this.delay);  
+                    } else {
+
+                    }
+                }
+
+
            //use a timeout to ensure the title is not replaced too early. If the title is replaced too soon, then the mendix default page title will overwrite it.
            
             
