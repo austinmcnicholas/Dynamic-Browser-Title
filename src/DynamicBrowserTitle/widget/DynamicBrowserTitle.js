@@ -66,7 +66,7 @@ define([
                     if (this.emptyReplacement){
                         var backupString = this.emptyReplacement;    
                         setTimeout(function(){ document.title = backupString }, this.delay);  
-                    } else {
+                    } else { 
 
                     }
                 }
